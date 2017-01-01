@@ -23,7 +23,7 @@ $keymanagerconfig->pubkey="{keymanager_public_key}";
 
 
 //distribution command, mind the trailing / in the destination path!
-$keymanagerconfig->distributioncmd='rsync -e "ssh -o StrictHostKeyChecking=no -o ConnectTimeout=10" --rsync-path="sudo rsync" -uv -c --chmod=ugo=r {localpath}* admin@{server}:/etc/ssh/security/control/ 2>&1';
+$keymanagerconfig->distributioncmd='rsync -e "ssh -o StrictHostKeyChecking=no -o ConnectTimeout=10" --rsync-path="sudo rsync" -uv -c --chmod=ugo=r {localpath}* {asuser}@{server}:/etc/ssh/security/control/ 2>&1';
 
-$keymanagerconfig->extracmd['default_2201'] = 'rsync -e "ssh -p2201 -o StrictHostKeyChecking=no -o ConnectTimeout=10" --rsync-path="sudo rsync" -uv -c --chmod=ugo=r {localpath}* admin@{server}:/etc/ssh/security/control/ 2>&1';
+$keymanagerconfig->extracmd['default_2201'] = 'rsync -e "ssh -p 2201 -o StrictHostKeyChecking=no -o ConnectTimeout=10" --rsync-path="sudo rsync" -uv -c --chmod=ugo=r {localpath}* {asuser}@{server}:/etc/ssh/security/control/ 2>&1';
 

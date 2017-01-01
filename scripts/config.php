@@ -19,7 +19,7 @@ $keymanagerconfig->asuser="admin";
 //public key
 $keymanagerconfig->keytype="ssh-rsa";
 $keymanagerconfig->identifier="keymanager";
-$keymanagerconfig->pubkey="";
+$keymanagerconfig->pubkey="{keymanager_public_key}";
 
 
 //distribution command, mind the trailing / in the destination path!

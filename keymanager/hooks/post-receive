@@ -1,0 +1,3 @@
+#!/bin/sh
+/bin/git --work-tree=/home/git/config --git-dir=/home/git/keymanager checkout -f
+/home/git/scripts/keymanager.php 2>&1 | grep -v bytes\ \ received | grep -v total\ size | grep -v -e '^$'
